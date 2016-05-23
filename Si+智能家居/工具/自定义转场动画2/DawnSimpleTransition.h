@@ -1,0 +1,24 @@
+//
+//  JTMaterialTransition.h
+//  JTMaterialTransition
+//
+//  Created by Jonathan Tribouharet
+//
+
+#import <Foundation/Foundation.h>
+
+#import <UIKit/UIKit.h>
+
+@interface DawnSimpleTransition : NSObject<UIViewControllerAnimatedTransitioning>
+
+@property (weak, nonatomic) UIView *animatedView;
+
+@property (nonatomic) CGRect startFrame;
+
+@property (nonatomic) UIColor *startBackgroundColor;
+
+@property (getter=isReverse) BOOL reverse;
+
+- (instancetype)initWithAnimatedView:(UIView *)animatedView;
+
+@end
